@@ -1,0 +1,23 @@
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <div class="nav-logo-mark">🌿</div>
+        <span class="nav-brand">Nutri<span>Vita</span></span>
+      </a>
+
+      <ul class="nav-links" id="navMenu">
+        <li><a href="/"          class="nav-link <%= page==='home'     ?'active':'' %>">Ana Sayfa</a></li>
+        <li><a href="/hakkimda"  class="nav-link <%= page==='about'    ?'active':'' %>">Hakkımda</a></li>
+        <li><a href="/hizmetler" class="nav-link <%= page==='services' ?'active':'' %>">Hizmetler</a></li>
+<li><a href="/blog"      class="nav-link <%= page==='blog'     ?'active':'' %>">Blog</a></li>
+        <li><a href="/iletisim"  class="nav-link <%= page==='contact'  ?'active':'' %>">İletişim</a></li>
+        <li><a href="/iletisim" class="nav-cta">✨ Randevu Al</a></li>
+      </ul>
+
+      <button class="hamburger" id="ham" aria-label="Menü">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>

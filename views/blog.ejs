@@ -1,0 +1,33 @@
+<section class="blog-sec" style="padding-top:120px;">
+  <div class="container">
+    <div class="blog-header reveal">
+      <div>
+        <div class="sec-tag">Blog</div>
+        <h1 style="font-family:var(--ff-head);font-size:clamp(1.8rem,4vw,2.6rem);font-weight:700;color:var(--dark);">Beslenme Rehberi 📖</h1>
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:8px;">
+        <button class="btn btn-primary" style="font-size:.78rem;padding:9px 18px;" onclick="filterPosts('all')">Tümü</button>
+        <% categories.forEach(cat => { %>
+        <button class="btn btn-outline" style="font-size:.78rem;padding:9px 18px;" onclick="filterPosts('<%= cat %>')"><%= cat %></button>
+        <% }) %>
+      </div>
+    </div>
+
+    <div class="blog-grid" id="blogGrid">
+      <% posts.forEach((post, i) => { %>
+      <a href="/blog/<%= post.slug %>" class="blog-card reveal reveal-d<%= Math.min(i%3+1,3) %>" data-cat="<%= post.category %>">
+        <div class="blog-thumb"><%= post.emoji %></div>
+        <div class="blog-body">
+          <span class="blog-cat"><%= post.category %></span>
+          <h3><%= post.title %></h3>
+          <p><%= post.excerpt %></p>
+          <div class="blog-meta">
+            <span><%= post.date %> · <%= post.readTime %> dk</span>
+            <span class="blog-more">Oku →</span>
+          </div>
+        </div>
+      </a>
+      <% }) %>
+    </div>
+  </div>
+</section>

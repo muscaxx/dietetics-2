@@ -1,0 +1,9 @@
+<section style="min-height:80vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:80px 24px;">
+  <div>
+    <div style="font-size:5rem;margin-bottom:24px;"><%= status === 404 ? '🍃' : '⚠️' %></div>
+    <h1 style="font-family:var(--font-heading);font-size:clamp(2rem,6vw,4rem);color:var(--dark);margin-bottom:12px;"><%= status %></h1>
+    <h2 style="font-family:var(--font-heading);font-size:1.4rem;color:var(--text);margin-bottom:16px;"><%= title %></h2>
+    <p style="color:var(--text-light);margin-bottom:36px;max-width:400px;margin-left:auto;margin-right:auto;"><%= message %></p>
+    <a href="/" class="btn btn-primary">Ana Sayfaya Dön</a>
+  </div>
+</section>

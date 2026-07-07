@@ -1,0 +1,103 @@
+<section class="contact-sec" style="padding-top:120px;">
+  <div class="container">
+    <div style="margin-bottom:52px;" class="reveal">
+      <div class="sec-tag">İletişim</div>
+      <h1 class="sec-h2">Randevu & İletişim 💬</h1>
+      <p class="sec-p" style="margin-top:12px;">Sorularınız veya randevu almak için formu doldurun — en kısa sürede size ulaşalım!</p>
+    </div>
+
+    <div class="contact-wrap">
+      <div class="contact-info reveal">
+        <h2>Hadi tanışalım! 👋</h2>
+        <p>Sağlık yolculuğunuzun her adımında yanınızdayım. İlk görüşme tamamen ücretsizdir.</p>
+
+        <div class="c-list">
+          <div class="c-item">
+            <div class="c-icon">📍</div>
+            <div>
+              <div class="c-lbl">Adres</div>
+              <div class="c-val"><%= site.address %></div>
+            </div>
+          </div>
+          <div class="c-item">
+            <div class="c-icon">📞</div>
+            <div>
+              <div class="c-lbl">Telefon</div>
+              <div class="c-val"><a href="tel:<%= site.phone.replace(/\s/g,'') %>"><%= site.phone %></a></div>
+            </div>
+          </div>
+          <div class="c-item">
+            <div class="c-icon">📧</div>
+            <div>
+              <div class="c-lbl">E-posta</div>
+              <div class="c-val"><a href="mailto:<%= site.email %>"><%= site.email %></a></div>
+            </div>
+          </div>
+          <div class="c-item">
+            <div class="c-icon">💬</div>
+            <div>
+              <div class="c-lbl">WhatsApp</div>
+              <div class="c-val"><%= site.phone %></div>
+            </div>
+          </div>
+          <div class="c-item">
+            <div class="c-icon">🕐</div>
+            <div>
+              <div class="c-lbl">Çalışma Saatleri</div>
+              <div class="c-val">Pzt–Cum: 09:00–18:00<br/>Cumartesi: 10:00–14:00</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="map-block" onclick="window.open('https://maps.google.com','_blank')">
+          <div class="map-pin-icon">📍</div>
+          <div class="map-lbl">Konumumuzu Haritada Gör</div>
+          <div class="map-addr"><%= site.address %></div>
+        </div>
+      </div>
+
+      <div class="contact-form-box reveal reveal-d1">
+        <h3>Randevu Formu ✨</h3>
+        <div id="formOk" class="f-ok"></div>
+
+        <form id="contactForm" novalidate>
+          <div class="f-row">
+            <div class="f-group">
+              <label for="name">Ad Soyad *</label>
+              <input type="text" id="name" name="name" placeholder="Adınız Soyadınız" />
+              <div class="f-err">Ad Soyad zorunludur.</div>
+            </div>
+            <div class="f-group">
+              <label for="email">E-posta *</label>
+              <input type="email" id="email" name="email" placeholder="ornek@email.com" />
+              <div class="f-err">Geçerli e-posta girin.</div>
+            </div>
+          </div>
+          <div class="f-row">
+            <div class="f-group">
+              <label for="phone">Telefon</label>
+              <input type="tel" id="phone" name="phone" placeholder="+90 (5__) ___ __ __" />
+            </div>
+            <div class="f-group">
+              <label for="service">Hizmet *</label>
+              <select id="service" name="service">
+                <option value="">Seçiniz...</option>
+                <% services.forEach(s => { %>
+                <option value="<%= s.title %>"><%= s.emoji %> <%= s.title %></option>
+                <% }) %>
+              </select>
+              <div class="f-err">Lütfen bir hizmet seçin.</div>
+            </div>
+          </div>
+          <div class="f-group">
+            <label for="message">Mesajınız</label>
+            <textarea id="message" name="message" placeholder="Kendinizden ve hedeflerinizden bahsedin..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
+            Randevu Talebi Gönder 🚀
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

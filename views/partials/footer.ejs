@@ -1,0 +1,65 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo-wrap">
+          <div class="footer-logo-mark">🌿</div>
+          <span class="footer-brand-name">Nutri<span>Vita</span></span>
+        </div>
+        <p><%= site.dietitian %> önderliğinde, bilimsel ve kişiye özel beslenme programlarıyla sağlıklı yaşamı birlikte inşa ediyoruz.</p>
+        <div class="socials">
+          <a href="#" class="social" aria-label="Instagram">📸</a>
+          <a href="#" class="social" aria-label="Facebook">👥</a>
+          <a href="#" class="social" aria-label="YouTube">▶️</a>
+          <a href="#" class="social" aria-label="LinkedIn">💼</a>
+          <a href="#" class="social" aria-label="TikTok">🎵</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Sayfalar</h4>
+        <ul class="footer-links">
+          <li><a href="/">Ana Sayfa</a></li>
+          <li><a href="/hakkimda">Hakkımda</a></li>
+          <li><a href="/hizmetler">Hizmetler</a></li>
+<li><a href="/blog">Blog</a></li>
+          <li><a href="/iletisim">İletişim</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Hizmetler</h4>
+        <ul class="footer-links">
+          <li><a href="/hizmetler">Kilo Yönetimi</a></li>
+          <li><a href="/hizmetler">Sporcu Beslenmesi</a></li>
+          <li><a href="/hizmetler">Hastalık Yönetimi</a></li>
+          <li><a href="/hizmetler">Online Danışmanlık</a></li>
+          <li><a href="/hizmetler">Çocuk Beslenmesi</a></li>
+          <li><a href="/hizmetler">Gebelik Beslenmesi</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Bülten</h4>
+        <p style="font-size:.875rem;margin-bottom:14px;line-height:1.7;">Sağlıklı tarifler ve beslenme ipuçları için abone olun 🥗</p>
+        <div class="nl-form">
+          <input type="email" class="nl-input" id="nlInput" placeholder="E-posta adresiniz" />
+          <button class="nl-btn" id="nlBtn">Abone Ol ✨</button>
+        </div>
+        <div style="margin-top:20px;display:flex;flex-direction:column;gap:6px;font-size:.82rem;color:rgba(255,255,255,.5);">
+          <span>📍 <%= site.address %></span>
+          <span>📞 <a href="tel:<%= site.phone.replace(/\s/g,'') %>" style="color:rgba(255,255,255,.5);transition:color .3s;" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color='rgba(255,255,255,.5)'"><%= site.phone %></a></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; <%= new Date().getFullYear() %> NutriVita Diyetisyenlik. Tüm hakları saklıdır. 💚</span>
+      <div class="footer-bottom-links">
+        <a href="#">Gizlilik Politikası</a>
+        <a href="#">KVKK</a>
+        <a href="#">Kullanım Koşulları</a>
+      </div>
+    </div>
+  </div>
+</footer>

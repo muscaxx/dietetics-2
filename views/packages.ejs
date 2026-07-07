@@ -1,0 +1,37 @@
+<section class="packages-sec" style="padding-top:120px;">
+  <div class="container">
+    <div class="packages-header reveal">
+      <div class="sec-tag">Fiyatlar</div>
+      <h1 class="sec-h2">Programınızı Seçin 🎯</h1>
+      <p class="sec-p" style="margin:12px auto 0;">Şeffaf fiyatlar, net içerikler. Hangi paketin size uygun olduğundan emin değilseniz — ilk görüşme ücretsiz!</p>
+    </div>
+
+    <div class="pkg-grid">
+      <% packages.forEach((pkg, i) => { %>
+      <div class="pkg-card <%= pkg.highlighted ? 'featured' : '' %> reveal reveal-d<%= i %>">
+        <% if (pkg.badge) { %><div class="pkg-badge"><%= pkg.badge %></div><% } %>
+        <div class="pkg-name"><%= pkg.name %></div>
+        <div class="pkg-desc"><%= pkg.description %></div>
+        <div class="pkg-price"><%= pkg.price.toLocaleString('tr-TR') %> <span style="font-size:1rem;font-weight:600;">TL</span></div>
+        <div class="pkg-period">/ <%= pkg.period %></div>
+        <hr class="pkg-divider" />
+        <ul class="pkg-feats">
+          <% pkg.features.forEach(f => { %>
+          <li class="pkg-feat">
+            <div class="pkg-check">✓</div>
+            <span><%= f %></span>
+          </li>
+          <% }) %>
+        </ul>
+        <a href="/iletisim" class="pkg-cta">Hemen Başla 🚀</a>
+      </div>
+      <% }) %>
+    </div>
+
+    <div style="text-align:center;margin-top:52px;background:var(--bg-alt);border-radius:var(--r-xl);padding:36px;border:1.5px solid var(--border);" class="reveal">
+      <div style="font-size:2rem;margin-bottom:12px;">🤔</div>
+      <p style="color:var(--muted);font-size:1rem;margin-bottom:20px;">Hangi paketin size uygun olduğundan emin değil misiniz?</p>
+      <a href="/iletisim" class="btn btn-primary">Ücretsiz Danışmanlık Al ✨</a>
+    </div>
+  </div>
+</section>

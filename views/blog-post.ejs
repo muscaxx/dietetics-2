@@ -1,0 +1,36 @@
+<section style="padding:120px 0 100px;">
+  <div class="container" style="max-width:800px;">
+    <div style="margin-bottom:32px;" class="fade-in">
+      <span class="blog-category"><%= post.category %></span>
+      <h1 style="font-family:var(--font-heading);font-size:clamp(1.8rem,4vw,2.4rem);color:var(--dark);margin:16px 0 12px;line-height:1.3;"><%= post.title %></h1>
+      <div style="color:var(--text-light);font-size:0.875rem;"><%= post.date %> • <%= post.readTime %> dakika okuma</div>
+    </div>
+    <div style="font-size:5rem;text-align:center;margin-bottom:40px;" class="fade-in"><%= post.emoji %></div>
+    <div style="color:var(--text);line-height:1.9;font-size:1.05rem;" class="fade-in">
+      <p><%= post.content %></p>
+      <p style="margin-top:24px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Beslenme bilimi sürekli gelişmekte olup, her bireyin ihtiyacı farklıdır.</p>
+      <p style="margin-top:24px;">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Doğru beslenme stratejileri hayat kalitenizi önemli ölçüde artırabilir.</p>
+    </div>
+
+    <% if (relatedPosts.length > 0) { %>
+    <div style="margin-top:60px;padding-top:48px;border-top:1px solid var(--gray-200);" class="fade-in">
+      <h3 style="font-family:var(--font-heading);font-size:1.4rem;color:var(--dark);margin-bottom:28px;">İlgili Yazılar</h3>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:20px;">
+        <% relatedPosts.forEach(rp => { %>
+        <a href="/blog/<%= rp.slug %>" class="blog-card" style="text-decoration:none;">
+          <div class="blog-thumb"><%= rp.emoji %></div>
+          <div class="blog-body">
+            <span class="blog-category"><%= rp.category %></span>
+            <h3><%= rp.title %></h3>
+          </div>
+        </a>
+        <% }) %>
+      </div>
+    </div>
+    <% } %>
+
+    <div style="text-align:center;margin-top:48px;" class="fade-in">
+      <a href="/blog" class="btn btn-outline-dark">← Tüm Yazılara Dön</a>
+    </div>
+  </div>
+</section>
