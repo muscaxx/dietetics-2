@@ -18,6 +18,16 @@
 <%- include('../partials/navbar') %>
 <main><%- body %></main>
 <%- include('../partials/footer') %>
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <ul class="mobile-nav-list">
+    <li><a href="/"          class="mobile-link <%= page==='home'    ?'active':'' %>">Ana Sayfa</a></li>
+    <li><a href="/hakkimda"  class="mobile-link <%= page==='about'   ?'active':'' %>">Hakkımda</a></li>
+    <li><a href="/hizmetler" class="mobile-link <%= page==='services'?'active':'' %>">Hizmetler</a></li>
+    <li><a href="/blog"      class="mobile-link <%= page==='blog'    ?'active':'' %>">Blog</a></li>
+    <li><a href="/iletisim"  class="mobile-link <%= page==='contact' ?'active':'' %>">İletişim</a></li>
+  </ul>
+  <a href="/iletisim" class="mobile-cta-btn">✨ Randevu Al</a>
+</div>
 <script src="/js/main.js"></script>
 <%- script %>
 </body>
